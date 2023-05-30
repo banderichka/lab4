@@ -19,12 +19,12 @@ void PrintFileAttributes(const fs::directory_entry& file) {
         }
         else std::cout << "Не прихований " << std::endl;
         if (attributes & FILE_ATTRIBUTE_READONLY) {
-            std::cout << "Архівний: " << std::endl;
+            std::cout << "Тільки для читання " << std::endl;
         }
-        else std::cout << "Не архівний " << std::endl;
+        else std::cout << "Не тільки для читання " << std::endl;
     }
     else {
-        std::wcout << L"Failed to retrieve file attributes." << std::endl;
+        std::cout << "Не вдалося отримати атрибути файлу." << std::endl;
     }
 }
 
